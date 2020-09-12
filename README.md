@@ -29,3 +29,61 @@ There are two main goal for client/developer:
 - Fulfil the requirement form school
 - Build build a useable solution for client future use
 
+---
+
+## Use case diagram
+
+<img src="README/UseCase.png" alt="A draft use case diagram" />
+
+## User Requirement
+
+- Customer can browser Client's brand and product information.
+- Customer can order product through third-party’s payment API (e.g iDeal, PayPal)
+- Customer can register a account with their E-mail.
+- Customer can check their product status.
+- ...
+
+## Wireframe
+
+**Desktop Version**
+
+- Landing Page
+
+  <img src="README/landingpage.png" alt="landing page" />
+
+- Register  Page
+
+  <img src="README/register.png" alt="register page" />
+
+- Main page
+
+  Working on....
+
+- Product info page
+
+  <img src="README/productinfo.png" alt="present basic product information"  />
+
+  
+
+- Shopping cart
+
+  Working on...
+
+- Tracking product page
+
+  Working on...
+
+- Change their own contact information page
+
+  Working on...
+
+## Database Modelling
+
+omit for now.
+
+
+
+
+
+
+
