@@ -57,25 +57,23 @@ There are two main goal for client/developer:
 
 - Main page
 
-  Working on....
+  <img src="README/mainpage.png" alt="homepage" />
 
 - Product info page
 
   <img src="README/productinfo.png" alt="present basic product information"  />
 
-  
-
 - Shopping cart
 
-  Working on...
+  <img src="README/shoppingcartpage.png" alt="shoppingcartpage"/>
 
-- Tracking product page
+- Checkout page
 
-  Working on...
+  <img src="README/checkoutpage.png" alt="checkoutpage"/>
 
-- Change their own contact information page
+- Personal Account manage page(tracking order/reviewed for product/setting )
 
-  Working on...
+  <img src="README/accountmanage.png" alt="accountmanage" />
 
 ## Database Modelling
 
