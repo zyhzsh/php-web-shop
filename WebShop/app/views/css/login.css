@@ -1,0 +1,30 @@
+.login_form_container{
+    display: block;
+    margin-top: 100px;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    background-color:gainsboro;
+    border-radius: 25px;
+}
+.logininput{
+  width:200px;
+  height: 25px;
+}
+
+.login_title{
+  color: mediumslateblue;
+}
+
+
+@media only screen and (max-width:619px) {
+.login_form_container{
+    background-color:black;
+    width: 340px;
+    height: 300px;
+    border-radius: 25px;
+    }
+
+}

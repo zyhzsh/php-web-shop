@@ -1,6 +1,5 @@
 # Web Application Topic : A Brand Web Shop
 
-​												***Test The Home Page*** ===>https://zyhzsh.github.io/Testpage/
 #### *PS: The information below might change during the progress of the project. This text is just to briefly describe the project make it more real.* 
 
 ## Introduction
@@ -78,7 +77,7 @@ There are two main goal for client/developer:
 
 ## Database Modelling
 
-omit for now.
+<img src="README/database v1.png" alt="database version one" />
 
 
 

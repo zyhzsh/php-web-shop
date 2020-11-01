@@ -1,0 +1,276 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items:center;
+    grid-template-areas:
+  ". Topsaleproducts ."
+  ". CategoryAproduct ."
+  ". CategoryBproduct ."
+  ". CategoryCproduct .";
+  }
+  
+  .TopSaleProducts{
+    grid-area: Topsaleproducts;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr;
+    align-self: center;
+    grid-column-gap: 10px;
+    grid-template-areas:
+    " . TopThreeTitle ."
+    "TopSaleShowCaseA TopSaleShowCaseB TopSaleShowCaseC";
+  }
+  .TopThreeTitle{
+    grid-area: TopThreeTitle;
+    text-align: center;
+  }
+  .TopSaleShowCaseA{
+    grid-area: TopSaleShowCaseA;
+  }
+  .TopSaleShowCaseB{
+    grid-area: TopSaleShowCaseB;
+  }
+  .TopSaleShowCaseC{
+    grid-area: TopSaleShowCaseC;
+  }
+  .TopSaleShowCaseA>a>img,.TopSaleShowCaseB>a>img,.TopSaleShowCaseC>a>img{
+    width: 100%;
+    min-width: 200px;
+  }
+  
+  .ShowCaseCategoryA{
+    grid-area: CategoryAproduct;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-areas:
+    ". TitleA ."
+    "A-1 A-2 A-3"
+    "A-1 A-4 A-5";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: fit-content;
+  }
+  .TitleA{
+    grid-area: TitleA;
+    align-self: center;
+    text-align: center;
+  }
+  .ShowCaseCategoryA-One{
+    grid-area:A-1;
+    width: 400px;
+    align-self: center;
+  }
+  .ShowCaseCategoryA-Two{
+    grid-area:A-2;
+    width: 400px;
+  }
+  .ShowCaseCategoryA-Three{
+    grid-area:A-3;
+    width: 400px;
+  }
+  .ShowCaseCategoryA-Four{
+    grid-area:A-4;
+    width: 400px;
+  }
+  .ShowCaseCategoryA-Five{
+    grid-area:A-5;
+    width: 400px;
+  }
+  
+  .ShowCaseCategoryA-One>a>img,
+  .ShowCaseCategoryA-Two>a>img,
+  .ShowCaseCategoryA-Three>a>img,
+  .ShowCaseCategoryA-Four>a>img,
+  .ShowCaseCategoryA-Five>a>img
+  {
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    max-height: 400px;
+  }
+  .ShowCaseCategoryA-One>a>img{
+    height: 100vh;
+  }
+  .ShowCaseCategoryB{
+    grid-area: CategoryBproduct;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-areas:
+    ". TitleB ."
+    "B-1 B-2 B-3"
+    "B-1 B-4 B-5";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: fit-content;
+  }
+  .TitleB{
+    grid-area: TitleB;
+    align-self: center;
+    text-align: center;
+  }
+  .ShowCaseCategoryB-One{
+    grid-area:B-1;
+    width: 400px;
+    align-self: center;
+  }
+  .ShowCaseCategoryB-Two{
+    grid-area:B-2;
+    width: 400px;
+  }
+  .ShowCaseCategoryB-Three{
+    grid-area:B-3;
+    width: 400px;
+  }
+  .ShowCaseCategoryB-Four{
+    grid-area:B-4;
+    width: 400px;
+  }
+  .ShowCaseCategoryB-Five{
+    grid-area:B-5;
+    width: 400px;
+  }
+  .ShowCaseCategoryB-One>a>img,
+  .ShowCaseCategoryB-Two>a>img,
+  .ShowCaseCategoryB-Three>a>img,
+  .ShowCaseCategoryB-Four>a>img,
+  .ShowCaseCategoryB-Five>a>img
+  {
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    max-height: 400px;
+  }
+  .ShowCaseCategoryB-One>a>img{
+    height: 100vh;
+  }
+  .ShowCaseCategoryC{
+    grid-area: CategoryCproduct;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-areas:
+    ". TitleC ."
+    "C-1 C-2 C-3"
+    "C-1 C-4 C-5";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: fit-content;
+  }
+  .TitleC{
+    grid-area: TitleC;
+    align-self: center;
+    text-align: center;
+  }
+  .ShowCaseCategoryC-One{
+    grid-area:C-1;
+    width: 400px;
+    align-self: center;
+  }
+  .ShowCaseCategoryC-Two{
+    grid-area:C-2;
+    width: 400px;
+  }
+  .ShowCaseCategoryC-Three{
+    grid-area:C-3;
+    width: 400px;
+  }
+  .ShowCaseCategoryC-Four{
+    grid-area:C-4;
+    width: 400px;
+  }
+  .ShowCaseCategoryC-Five{
+    grid-area:C-5;
+    width: 400px;
+  }
+  .ShowCaseCategoryC-One>a>img,
+  .ShowCaseCategoryC-Two>a>img,
+  .ShowCaseCategoryC-Three>a>img,
+  .ShowCaseCategoryC-Four>a>img,
+  .ShowCaseCategoryC-Five>a>img
+  {
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    max-height: 400px;
+  }
+  .ShowCaseCategoryC-One>a>img{
+    height: 100vh;
+  }
+  @media(min-width:800px) and (max-width:1550px)  {
+    
+    .TopSaleProducts{
+      grid-template-columns:1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "TopThreeTitle"
+      "TopSaleShowCaseA"
+      "TopSaleShowCaseB"
+      "TopSaleShowCaseC";
+      display: table-header-group;
+    }
+    .ShowCaseCategoryA{
+      align-self: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 5fr 5fr 5fr;
+      grid-template-areas:
+          ". TitleA TitleA ."
+          ". A-1 A-2 ."
+          ". A-3 A-4 ."
+          ". A-5 A-5 .";
+    }
+    .ShowCaseCategoryB{
+      align-self: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 5fr 5fr 5fr;
+      grid-template-areas:
+          ". TitleB TitleB ."
+          ". B-1 B-2 ."
+          ". B-3 B-4 ."
+          ". B-5 B-5 .";
+    }
+    .ShowCaseCategoryC{
+      align-self: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 5fr 5fr 5fr;
+      grid-template-areas:
+          ". TitleC TitleC ."
+          ". C-1 C-2 ."
+          ". C-3 C-4 ."
+          ". C-5 C-5 .";
+    }
+    }
+    
+    @media only screen and (max-width:799px) {
+    main{
+      display: block;
+    }
+    .TopSaleProducts,.ShowCaseCategoryA,.ShowCaseCategoryB,.ShowCaseCategoryC{
+      display: flex;
+      flex-direction: column;
+    }
+    .ShowCaseCategoryA-One,
+    .ShowCaseCategoryA-Two,
+    .ShowCaseCategoryA-Three,
+    .ShowCaseCategoryA-Four,
+    .ShowCaseCategoryA-Five,
+    .ShowCaseCategoryB-One,
+    .ShowCaseCategoryB-Two,
+    .ShowCaseCategoryB-Three,
+    .ShowCaseCategoryB-Four,
+    .ShowCaseCategoryB-Five,
+    .ShowCaseCategoryC-One,
+    .ShowCaseCategoryC-Two,
+    .ShowCaseCategoryC-Three,
+    .ShowCaseCategoryC-Four,
+    .ShowCaseCategoryC-Five
+    {
+      align-self: center;
+    }
+    footer{
+        font-size: 10px;
+    }
+    
+    }

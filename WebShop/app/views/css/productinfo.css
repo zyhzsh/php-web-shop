@@ -1,0 +1,40 @@
+main{
+    margin-top: 100px;
+    display: grid;  
+    grid-template-areas:
+    ". A A B B B ."
+    ". A A C C C ."
+    ". D D D D D .";
+    grid-column-gap: 10px;
+}
+.prodcutimg{      
+    grid-area: A;
+}
+.prodcutimg> img{
+width: 360px;
+border-radius: 25px;
+}
+.productinfo{
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 25px;
+    padding-top: 50px;
+    font-size: 20px;
+    grid-area: B;
+}
+.shoppingbtn{
+    text-align: center;
+    margin-top: 5px;
+    grid-area: C;
+    background-color: gainsboro;
+    border-radius: 25px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.productdetail{
+    margin-top: 20px;
+    background-color: gainsboro;
+    border-radius: 25px;
+    text-align: center;
+    grid-area: D;
+}
