@@ -17,7 +17,13 @@
 .login_title{
   color: mediumslateblue;
 }
+.login_go_signup{
+  color: mediumaquamarine;
+}
 
+.login_go_signup:hover{
+  color: mediumslateblue;
+}
 
 @media only screen and (max-width:619px) {
 .login_form_container{

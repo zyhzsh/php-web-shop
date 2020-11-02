@@ -1,7 +1,5 @@
 <?php
 class PostController extends BaseController{
-    
-
     //Get Page Element
     public function GetElement($element)
     {
@@ -13,31 +11,49 @@ class PostController extends BaseController{
     //Login
     public function Login()
     {
-       if(isset($_POST['username'])&&isset($_POST['password']))
-       {
-            $username=$_POST['username'];
-            $password=$_POST['password'];
-
-            $db=new PostModel();
-            $conn= $db->createConnection();
-            $sql='SELECT * FROM account WHERE username=(?) AND password=(?)';
-            $stmt=$conn->prepare($sql);
-            $result=$stmt->fectch();
-            if(empty($result))
-            {
-                return false;
-            }
-            else 
-            {
-                //Start Session
-                //$this->user=new ;
-                echo"Logged in";
-                includeView("index.php");
-            }
-        }else
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        //handling the error typo.....
+        //then...
+        $db=new PostModel();
+        if($db->Login($username,$password))
         {
-            
-        }    
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+ 
+
+
+
+
+
+
+
+    //SignUp
+    public function SignUp()
+    {    
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $email=$_POST['email'];
+        $firstname=$_POST['firstname'];
+        $lastname=$_POST['lastname'];
+        $db=new PostModel();        
+        if($db->Register($username,$password,$email,$firstname,$lastname)==true)
+        {
+            return true;
+        }
+        else
+        {   return false;}       
+    }
+ 
+
+    public function Logout()
+    {
+
     }
     //Route Page
     public function RoutePage()
@@ -80,8 +96,4 @@ class PostController extends BaseController{
     //
 
 }
-    
-
-
-
 ?>

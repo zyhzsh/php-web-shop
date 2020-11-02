@@ -3,7 +3,7 @@
       <div class="TopSaleProducts">
         <h2 class="TopThreeTitle">Top Three Products</h2>
         <div class="TopSaleShowCaseA">
-          <a href="#"><img src="app/views/img/product/categoryA/A-1.jpg" alt=""></a>
+          <a href="productinfo.php"><img src="app/views/img/product/categoryA/A-1.jpg" alt=""></a>
         </div>
         <div class="TopSaleShowCaseB">
           <a href="#"><img src="app/views/img/product/categoryB/B-1.jpg" alt=""></a>
@@ -14,7 +14,7 @@
       </div>
     <div id="C-A" class="ShowCaseCategoryA">
       <h2 class="TitleA">CategoryA</h2>
-      <div class="ShowCaseCategoryA-One"> <a href="#"> <img src="app/views/img/product/categoryA/A-1.jpg" alt=""> </a> </div>
+      <div class="ShowCaseCategoryA-One"> <a href="productinfo.php"> <img src="app/views/img/product/categoryA/A-1.jpg" alt=""> </a> </div>
       <div class="ShowCaseCategoryA-Two"> <a href="#"> <img src="app/views/img/product/categoryA/A-2.jpg" alt=""> </a> </div>
       <div class="ShowCaseCategoryA-Three"> <a href="#"> <img src="app/views/img/product/categoryA/A-3.jpg" alt=""> </a> </div>
       <div class="ShowCaseCategoryA-Four"> <a href="#"> <img src="app/views/img/product/categoryA/A-4.jpg" alt=""> </a> </div>

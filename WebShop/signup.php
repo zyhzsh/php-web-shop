@@ -16,10 +16,8 @@
   <body>
     <div class="content">
     <?php $postcontroller->GetElement("header");?>
-    <?php $postcontroller->GetElement("productinfo")?>
+    <?php $postcontroller->GetElement("signup")?>
     </div>
     <?php $postcontroller->GetElement("footer")?> 
   </body>
 </html>
-
-

@@ -37,10 +37,12 @@ class Customer extends User
       $this->housenumber=$housenumber;
       $this->postcode=$customer_id;
     }
+    //When SignUp 
+    public function __construct5($username,$email,$firstname,$lastname,$password)
+    {
+        
+    }
     
-
-
-
     //Get information 
     public function Get_Customer_Address_Overview()
     {

@@ -1,7 +1,7 @@
 <?php
-  require 'includes/Classes.php';
+  include_once 'includes/MvcClasses.php';
   $postcontroller=new PostController();
-  
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

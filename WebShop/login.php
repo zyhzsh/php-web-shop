@@ -1,5 +1,5 @@
 <?php
-  require 'includes/Classes.php';
+  include_once 'includes/MvcClasses.php';
   $postcontroller=new PostController();
 ?>
 <!DOCTYPE html>
