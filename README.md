@@ -77,8 +77,7 @@ There are two main goal for client/developer:
 
 ## Database Modelling
 
-<img src="README/database v1.png" alt="database version one" />
-
+<img src="README/Database V1.PNG " alt="database version one" />
 
 
 
