@@ -2,6 +2,13 @@
   include_once 'includes/MvcClasses.php';
   $postcontroller=new PostController();
   session_start();
+  //when is not loggined in
+  if(!isset($_SESSION['username']))
+  {
+    header("Location:login.php");
+    exit();
+  }
+  
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -17,10 +24,8 @@
   <body>
     <div class="content">
     <?php $postcontroller->GetElement("header");?>
-    <?php $postcontroller->GetElement("productinfo")?>
+    <?php $postcontroller->GetElement("userprofile")?>
     </div>
     <?php $postcontroller->GetElement("footer")?> 
   </body>
 </html>
-
-

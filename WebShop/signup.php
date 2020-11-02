@@ -1,6 +1,12 @@
 <?php
   include_once 'includes/MvcClasses.php';
   $postcontroller=new PostController();
+  //when logined in 
+  if(isset($_SESSION['username']))
+  {
+    header("Location:index.php");
+    exit();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

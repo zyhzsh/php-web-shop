@@ -1,3 +1,10 @@
+<?php
+    if(isset($_SESSION['username']))
+    {
+        header("Location:userprofile.php");
+        exit();
+    }
+?>
 <link rel="stylesheet" href="app/views/css/signup.css">
 <main>  
     <div class="signup_form_container">
@@ -16,6 +23,7 @@
     </div>
     </div>
     <?php
+            
             if(isset($_GET['error']))
             {
                 if($_GET['error']=="emptyfields")

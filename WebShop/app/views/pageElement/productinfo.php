@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="app/views/css/productinfo.css">
 <main>
+<?php
+  
+  $postcontroller=new PostController();
+ // $postcontroller->Productinfo();
+ // $postcontroller->ProductImg();
+  
+?>
 <div class="prodcutimg"><img src="app/views/img/product/categoryB/B-1.jpg" alt=""></div>
 <div class="productinfo">
     <p>Product Name: Mountain</p>

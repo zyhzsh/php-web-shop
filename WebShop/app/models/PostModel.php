@@ -12,7 +12,7 @@ class PostModel extends BaseModel{
             $result=$stmt->fetch();
             if(empty($result))
             {
-                $sql="INSERT INTO `account` (`username`, `password`, `Email`, `first_name`, `last_name`, `portrait_link`, `account_type`) VALUES (?,?,?,?,?,'app/views/img/defaultprotrrait.png','C');";
+                $sql="INSERT INTO `account` (`username`, `password`, `Email`, `first_name`, `last_name`, `portrait_link`, `account_type`) VALUES (?,?,?,?,?,'app/views/img/defaultprotrait.PNG','C');";
                 $stmt=$conn->prepare($sql);               
                 $stmt->execute([$username,$password,$email,$firstname,$lastname]);
                 $sql="INSERT INTO `customer` (`username`, `customer_id`, `country`, `city`, `street`, `housenumber`, `postcode`) VALUES (?, NULL, NULL, NULL, NULL, NULL, NULL);";

@@ -1,6 +1,6 @@
 <header>
       <nav>    
-       <div class="logo"><a href="">I'm Logo</a></div>
+       <div class="logo"><a href="index.php">I'm Logo</a></div>
         <div class="mainlinks">
           <div class="categoryA"><a href="index.php#C-A">CategoryA</a></div>
           <div class="categoryB"><a href="index.php#C-B">CategoryB</a></div>

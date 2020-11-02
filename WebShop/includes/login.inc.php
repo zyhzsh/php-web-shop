@@ -7,13 +7,13 @@ if(isset($_POST['login-submit']))
     $password=$_POST['password'];
     if(empty($username)||empty($password))
     {
-        header("Location:../index.php?error=emptyfields");
+        header("Location:../login.php?login=emptyfields");
         exit();
     }
     //Invaild username 
     else if(!preg_match("/^[a-zA-Z0-9]*$/",$username))
     {
-        header("Location:../signup.php?error=invaildusername&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
+        header("Location:../signup.php?login=invaildusername&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
         exit();
     }
     else
