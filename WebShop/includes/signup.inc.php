@@ -73,7 +73,7 @@ if(isset($_POST['signup-submit']))
     {
         if($postcontroller->SignUp())
         {
-            header("Location:../login.php");
+            header("Location:../login.php?signup=success");
             exit();
         } 
         else

@@ -1,5 +1,4 @@
 <?php
-    // if user are logined in 
     session_start();
     if(isset($_SESSION['username']))
     {
@@ -30,8 +29,15 @@ if(isset($_GET['login']))
 {
     if($_GET['login']=="emptyfields")
     {
+        echo '<br><p style="color:red; text-align: center;">Please fill the username and password</p>';
+    }else if ($_GET['login']=="loginfaild")
+    {
         echo '<br><p style="color:red; text-align: center;">Login faild Please Try Again</p>';
     }
+}else if (isset($_GET['signup']))
+{
+    if($_GET['signup']=='success')
+    echo '<br><p style="color:green; text-align: center;">sign up success you can login now</p>';
 }
 
 ?>
