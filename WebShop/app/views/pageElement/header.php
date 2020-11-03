@@ -15,10 +15,10 @@
         </div>
         <div class="mini-navbar">
           <i class="fas fa-bars fa-3x">
-            <div class="dropdown_link"><li><a href="#C-A">CategoryA</a></li>
-                                       <li><a href="#C-B">CategoryB</a></li>
-                                       <li><a href="#C-C">CategoryC</a></li>
-                                       <li><a href="#">Login</a></li>
+            <div class="dropdown_link"><li><a href="index.php#C-A">CategoryA</a></li>
+                                       <li><a href="index.php#C-B">CategoryB</a></li>
+                                       <li><a href="index.php#C-C">CategoryC</a></li>
+                                       <li><a href="login.php">Login</a></li>
                                        <li><a href="#">Shopping Cart</a></li>
                                        <li><a href="about.php">About</a></li>
                                        </div>                                                          

@@ -62,6 +62,15 @@
                 {
                     echo '<br><p style="color:red; text-align: center;">Please Check Your passcode</p>';
                 }
-            }
+            } 
+            else if (isset($_GET['signup']))
+                {
+                    if($_GET['signup']=="usernameexists")
+                    {
+                    echo '<br><p style="color:red; text-align: center;">This User name is already in use by someone else. Please try another username.</p>';
+                    }
+                }
+           
+            
         ?>
 </main>

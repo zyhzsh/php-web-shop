@@ -23,7 +23,7 @@ class PostModel extends BaseModel{
             }
             else
             {
-                header("Location:../signup.php?&signup=usernameexists&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
+                header("Location:../signup.php?signup=usernameexists&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
                 exit();
             }
         }
