@@ -2,7 +2,7 @@
 if(isset($_POST['signup-submit']))
 {
    include_once('Classes.inc.php');
-   $postcontroller=new PostController();
+   $accountcontroller=new AccountController();
    $username=$_POST['username'];
    $password=$_POST['password'];
    $email=$_POST['email'];
@@ -71,16 +71,7 @@ if(isset($_POST['signup-submit']))
     //Sign Up The New Account
     else
     {
-        if($postcontroller->SignUp())
-        {
-            header("Location:../login.php?signup=success");
-            exit();
-        } 
-        else
-        {
-            header("Location:../signup.php?signup=faild&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
-            exit();
-        }
+        $accountcontroller->SignUp();
     }
 }
 else

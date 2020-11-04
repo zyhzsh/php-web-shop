@@ -1,7 +1,6 @@
 <?php
   include_once 'includes/MvcClasses.php';
-  $postcontroller=new PostController();
-  session_start();
+  $elementcontroller=new ElementController();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -16,11 +15,11 @@
   </head>
   <body>
     <div class="content">
-    <?php $postcontroller->GetElement("header");?>
-    <?php $postcontroller->GetElement("homepagemain")?>
+    <?php $elementcontroller->GetElement("header");?>
+    <?php $elementcontroller->GetElement("homepagemain")?>
     </div>
-    <?php $postcontroller->GetElement("footer")?> 
   </body>
+  <?php $elementcontroller->GetElement("footer")?> 
 </html>
 
 

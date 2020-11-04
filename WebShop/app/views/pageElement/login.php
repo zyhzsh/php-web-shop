@@ -39,7 +39,6 @@ if(isset($_GET['login']))
     if($_GET['signup']=='success')
     echo '<br><p style="color:green; text-align: center;">sign up success you can login now</p>';
 }
-
 ?>
 
 

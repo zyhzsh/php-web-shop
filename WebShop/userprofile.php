@@ -1,6 +1,6 @@
 <?php
   include_once 'includes/MvcClasses.php';
-  $postcontroller=new PostController();
+  $elementcontroller=new ElementController();
   session_start();
   //when is not loggined in
   if(!isset($_SESSION['username']))
@@ -8,7 +8,6 @@
     header("Location:login.php");
     exit();
   }
-  
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -23,9 +22,9 @@
   </head>
   <body>
     <div class="content">
-    <?php $postcontroller->GetElement("header");?>
-    <?php $postcontroller->GetElement("userprofile")?>
+    <?php $elementcontroller->GetElement("header");?>
+    <?php $elementcontroller->GetElement("userprofile")?>
     </div>
-    <?php $postcontroller->GetElement("footer")?> 
   </body>
+  <?php $elementcontroller->GetElement("footer")?> 
 </html>

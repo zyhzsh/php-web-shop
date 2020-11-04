@@ -16,8 +16,10 @@
   <body>
     <div class="content">
     <?php $elementcontroller->GetElement("header");?>
-    <?php $elementcontroller->GetElement("about")?>
+    <?php $elementcontroller->GetElement("shoppingcart")?>
     </div>
   </body>
   <?php $elementcontroller->GetElement("footer")?> 
 </html>
+
+

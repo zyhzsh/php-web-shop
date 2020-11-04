@@ -1,13 +1,15 @@
 <?php
- //Models
+ /**************Models************/
  include_once('app/models/BaseModel.php');
- include_once('app/models/PostModel.php');
- include_once('app/models/UserModel.php');
- //Controllers
+ include_once('app/models/AccountModel.php');
+ include_once('app/models/ProductModel.php');
+ /**************Controllers************/
  include_once('app/controllers/BaseController.php');
  include_once('app/controllers/PostController.php');
- include_once('app/controllers/User.php'); 
+ include_once('app/controllers/AccountController.php'); 
  include_once('app/controllers/Customer.php');
  include_once('app/controllers/ProductManager.php');
  include_once('app/controllers/Product.php');
+ include_once('app/controllers/ProductController.php');
+ include_once('app/controllers/ElementController.php');
 ?>

@@ -2,7 +2,6 @@
 if(isset($_POST['login-submit']))
 {
     require_once('Classes.inc.php');
-    $postcontroller=new PostController();
     $username=$_POST['username'];
     $password=$_POST['password'];
     if(empty($username)||empty($password))
@@ -18,20 +17,8 @@ if(isset($_POST['login-submit']))
     }
     else
     {        
-        if($postcontroller->Login())
-        {
-            if($_SESSION['accounttype']=='C')
-            {
-                header("Location:../index.php?login=success");
-                exit();
-            }
-            elseif ($_SESSION['accounttype']=='P')
-            {
-                header("Location:../productmanager.php?login=success");
-                exit();
-            }
-            
-        }
+        $accountcontroller=new AccountController();
+        $accountcontroller->Login($username,$password);       
     }
 }
 else

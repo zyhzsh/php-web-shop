@@ -1,6 +1,6 @@
 <?php
   include_once 'includes/MvcClasses.php';
-  $postcontroller=new PostController();
+  $elementcontroller=new ElementController();
   //when logined in 
   if(isset($_SESSION['username']))
   {
@@ -21,9 +21,9 @@
   </head>
   <body>
     <div class="content">
-    <?php $postcontroller->GetElement("header");?>
-    <?php $postcontroller->GetElement("signup")?>
+    <?php $elementcontroller->GetElement("header");?>
+    <?php $elementcontroller->GetElement("signup")?>
     </div>
-    <?php $postcontroller->GetElement("footer")?> 
   </body>
+  <?php $elementcontroller->GetElement("footer")?> 
 </html>

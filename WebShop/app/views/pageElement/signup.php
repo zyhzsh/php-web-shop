@@ -22,8 +22,7 @@
     </form>
     </div>
     </div>
-    <?php
-            
+    <?php       
             if(isset($_GET['error']))
             {
                 if($_GET['error']=="emptyfields")

@@ -1,3 +1,14 @@
+<?php
+  if(isset($_SESSION['accounttype']))
+  {
+    if(!$_SESSION['accounttype']=='P')
+    {
+        header("Location:index.php");
+        exit();
+    }
+  }
+?>
+
 <link rel="stylesheet" href="app/views/css/productmanager.css">
 <main>
     <div class="productmanagerpage_container">

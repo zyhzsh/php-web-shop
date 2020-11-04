@@ -1,23 +1,51 @@
 <?php
-class Product
-{
-    private $product_id;
-    private $product_name;
-    private $current_price;
-    private $current_stock;
-    private $description;
-    private $img_link;
-    //Construct
-    //Happends When Load it From Database
-    public function __construct($product_id,$product_name,$current_price,$description,$img_link)
-    {
-        $this->product_id=$product_id;
-        $this->product_name=$product_name;
-        $this->current_price=$current_price;
-        $this->description=$description;
-        $this->img_link=$img_link;
-    }
-
+class Product{
+  private $productid;
+  private $productname;
+  private $productprice;
+  private $productstock;
+  private $productdescription;
+  private $img;
+  private $category;
+  //Constructor
+  public function __construct($product_id,$product_name,$current_price,$current_stock,$description,$img_link,$category)
+  {
+    $this->productid=$product_id;
+    $this->productname=$product_name;
+    $this->productprice=$current_price;
+    $this->productstock=$current_stock;
+    $this->productdescription=$description;
+    $this->img=$img_link;
+    $this->category=$category;
+  }
+  //Get
+  public function Get_Product_Id()
+  {
+    return $this->productid;
+  }
+  public function Get_Product_Name()
+  {
+    return $this->productname;
+  }
+  public function Get_Product_Price()
+  {
+    return $this->productprice;
+  }
+  public function Get_Product_Stock()
+  {
+    return $this->productstock;
+  }
+  public function Get_Product_Descrition()
+  {
+    return $this->productdescription;
+  }
+  public function Get_Product_img()
+  {
+    return $this->img;
+  }
+  //Set 
+  
 
 }
+
 ?>
