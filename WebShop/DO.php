@@ -1,14 +1,8 @@
 <?php
   include_once 'includes/MvcClasses.php';
-  $elementcontroller=new ElementController();
-
-  $x =new ProductController();
-  $s=$x->Get_Product_List();
-  foreach($s as $z)
-  {
-      echo $z['product_id'];
-  }
-
+  $x=new ShoppingCartController();
+  $res=$x->Load_Shopping_Cart_Info('8');
+  var_dump($res);
 ?>
 
 

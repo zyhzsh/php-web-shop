@@ -6,7 +6,7 @@ class ProductModel extends BaseModel
    
    //functions
    
-   //Get product Objection Form database
+   //Get product Objection Form database by ProductId
    public function Get_Product_Object_By_Id_From_Database($productid)
    {
     try
@@ -40,30 +40,63 @@ class ProductModel extends BaseModel
     }
    }
 
+   //Get all product from the database
+   public function Get_List_Product_From_Database()
+   {
+     try
+     {
+      if(self::$connection==null){self::$connection=$this->createConnection();}
+      {
+        $sql="SELECT * FROM product";
+        $stmt=self::$connection->prepare($sql);
+        $stmt->execute();
+        $result=$stmt->fetchAll();
+        if(!empty($result))
+        {
+         self::$connection=null;
+         return $result;
+        }
+        self::$connection=null;
+        return null;
+      }
+     }
+     catch(PDOException $e)
+     {
+         return null;
+     }
+   }
+   //Get all product list from the database by category
+   public function Get_List_Product_From_Database_By_Category($product_Category)
+   {
+    try
+    {
+      if(self::$connection==null){self::$connection=$this->createConnection();}
+      {
+        $sql="SELECT * FROM product where category=?";
+        $stmt=self::$connection->prepare($sql);
+        $stmt->execute([$product_Category]);
+        $result=$stmt->fetchAll();
+        if(!empty($result))
+        {
+          self::$connection=null;
+          return $result;
+        }
+        self::$connection=null;
+        return null;
+      }
+    }
+    catch(PDOException $e)
+    {
+        return null;
+    }
+    
+   }
    //
    public function Close_Connection()
    {
         self::$connection=null;
    }
 
-   //Get product from the database
-   public function Get_List_Product_From_Database()
-   {
-    if(self::$connection==null){self::$connection=$this->createConnection();}
-    {
-      $sql="SELECT * FROM product";
-      $stmt=self::$connection->prepare($sql);
-      $stmt->execute();
-      $result=$stmt->fetchAll();
-      if(!empty($result))
-      {
-       self::$connection=null;
-       return $result;
-      }
-      self::$connection=null;
-      return null;
-    }
-   }
 }
 
 ?>

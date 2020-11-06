@@ -33,6 +33,9 @@ if(isset($_GET['login']))
     }else if ($_GET['login']=="loginfaild")
     {
         echo '<br><p style="color:red; text-align: center;">Login faild Please Try Again</p>';
+    }else if ($_GET['login']=="logintheneditshoppingcart")
+    {
+        echo '<br><p style="color:green; text-align: center;">Ater logged in you could update the shopping cart</p>';
     }
 }else if (isset($_GET['signup']))
 {
