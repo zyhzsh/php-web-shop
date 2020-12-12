@@ -10,15 +10,15 @@
     <div class="signup_form_container">
         <div class="signup_form"><br>
         <h2 class="signup_title">SignUp</h2><br>
-    <form action="includes/signup.inc.php" method="post">
+    <form action="app/pretreatment/User/signup.php" method="post">
         <input class="signupinput" type="text" name="username" placeholder="Username"><br>
         <input class="signupinput" type="text" name="email" placeholder="Email"><br>
         <input class="signupinput" type="text" name="firstname" placeholder="Firstname"><br>
         <input class="signupinput" type="text" name="lastname" placeholder="Lastname"><br>
         <input class="signupinput" type="password" name="password" placeholder="Password"><br>
         <input class="signupinput" type="password" name="password-repeat" placeholder="Repeat Password"><br><br>
-        <button type="submit" name="signup-submit">Signup</button><br><br>
-        <a class="signup_go_login" href="login.php">Login</a>
+        <button class="ui-button" type="submit" name="signup-submit">Signup</button><br><br>
+        <a class="signup_go_login" href="?page=login">Login</a>
     </form>
     </div>
     </div>

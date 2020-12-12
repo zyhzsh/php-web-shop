@@ -10,18 +10,18 @@ class AccountController
          {
              if($_SESSION['accounttype']=='C')
              {
-                header("Location:../index.php?login=success");
+                header("Location:../../../?page=homepage&login=success");
                 exit();
              }
              else if ($_SESSION['accounttype']='P')
              {
-                header("Location:../index.php?login=success");
+                header("Location:../../../?page=homepage&login=success");
                 exit();
              }
          }
          else
          {
-            header("Location:../login.php?login=faild");
+            header("Location:../../../?page=login&login=faild");
          }
      }
      //SignUp a Customer account
@@ -35,11 +35,11 @@ class AccountController
          $db=new AccountModel();        
          if($db->Register($username,$password,$email,$firstname,$lastname)==true)
          {
-            header("Location:../login.php?signup=success");
+            header("Location:../../../?page=login&signup=success");
             exit();
          }
          else
-         {   header("Location:../signup.php?signup=faild&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
+         {   header("Location:../../../?page=signup&signup=faild&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
             exit();
          }                 
       }

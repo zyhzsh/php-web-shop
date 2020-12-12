@@ -1,5 +1,4 @@
 main{
-    margin-top: 100px;
     display: grid;  
     grid-template-areas:
     ". A A B B B ."

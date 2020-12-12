@@ -25,7 +25,7 @@ class AccountModel extends BaseModel
             else
             {
                 $conn=null;
-                header("Location:../signup.php?signup=usernameexists&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
+                header("Location:../../../?page=signup&signup=usernameexists&username=".$username."&email=".$email."&firstname=".$firstname."&lastname=".$lastname);
                 exit();
             }
         }
@@ -48,7 +48,7 @@ class AccountModel extends BaseModel
         $result=$stmt->fetch();
         if(empty($result))
         {
-            header("Location:../login.php?login=loginfaild");
+            header("Location:../../../?page=login&login=loginfaild");
             $conn=null; 
             exit();
         }
@@ -72,7 +72,7 @@ class AccountModel extends BaseModel
                 $_SESSION['city']=$result['city'];
                 $_SESSION['street']=$result['street'];
                 $_SESSION['housenumber']=$result['housenumber'];
-                $_SESSION['postcode']=$result['postcode'];
+                $_SESSION['postcode']=$result['postcode'];           
                 $conn=null;
                 return true;
             }

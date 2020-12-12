@@ -12,7 +12,7 @@ class ShoppingCartController
     public function Add_Product_To_Shopping_Cart($customerid,$product_id,$product_quantity)
     {
         $db=new ShoppingCartModel();
-        $db->Add_Prodcut($customerid,$product_id,$product_quantity);
+        return $db->Add_Prodcut($customerid,$product_id,$product_quantity);
     }
 
     public function Delete_Product_From_Shoppping_Cart($customerid,$product_id)

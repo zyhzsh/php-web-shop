@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="app/views/css/productinfo.css">
-<main>
 <?php
  if(isset($_GET['product']))
  {
@@ -18,6 +16,10 @@
      exit();
  }
 ?>
+
+
+<link rel="stylesheet" href="app/views/css/productinfo.css">
+<main>
 <div class="prodcutimg"><img src="<?php echo $product->Get_Product_img();?>" alt=""></div>
 <div class="productinfo">
     <p>Product Name: <?php echo $product->Get_Product_Name(); ?></p>
@@ -25,10 +27,11 @@
     <p>Price: <?php echo $product->Get_Product_Price();?> EUR</p>
 </div>
 <div class="shoppingbtn">
-    <form action="">
-    <input type="text">    
-    <button>CheckOut</button><br><br>
-    <button>Add To Shopping Cart</button>
+    <form action="app/pretreatment/Customer/addtoshoppingcart.php" method="post">
+    <input type="number" name="quantity" min=1 max=<?php echo $product->Get_Product_Stock(); ?> value=1 >
+    <input type="hidden" name="page" value="<?php echo $_GET['page'];?>"> 
+    <input type="hidden" name="product_id" value="<?php echo $_GET['product']; ?>"><br><br>
+    <button type="submit" class="ui-button" name="Add_To_Cart">Add to Cart <i class="fas fa-shopping-cart"></i></button>
     </form>
 </div>
 <div class="productdetail_container">

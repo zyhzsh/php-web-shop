@@ -1,10 +1,63 @@
-img{
-    max-width: 100%;
-    height: auto;
-    background-color: lightblue;
-    background: radial-gradient(white 30%,lightblue 70%);
+.order_container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    justify-content: center;
+    grid-column-gap:20px;
 }
 
-.card-body{
-    background-color: wheat;
+/*Title for the container*/
+.shoppingcart_container>h2,.checkout_container>h2{
+    padding-top: 20px;
+    padding-bottom:20px;
+   
+    text-align: center;
 }
+.checkout_container>h2{
+background-color: gainsboro;
+}
+/*Shoppingcart*/
+.shoppingcart_container{
+    display: grid;
+    margin-left: 20px;
+    background-color: gainsboro;
+    grid-template-rows: repeat(1fr);
+}
+
+
+
+/*Shopping Cart Items*/
+.shoppingcart_item_container{
+    display: grid;
+    border: 1px solid #111;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.productinformationcontainer,.productname,.productunitprice,.productamount,
+.price,.btn-remove{
+    display: flex;
+    align-self: center;
+    line-height: 2;
+}
+.productamount{
+    line-height: 1;
+}
+
+.productimgcontainer>a>img{
+    width: 200px;
+}
+
+/*Order infromation*/
+.checkout_container{
+    margin-right: 20px;
+    text-align: center;
+}
+.order_detail{
+    background-color: gainsboro;
+}
+
+.ordercontainer{
+    border: 1px solid #111;
+}
+
