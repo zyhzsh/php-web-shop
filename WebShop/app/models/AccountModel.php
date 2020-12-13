@@ -94,6 +94,26 @@ class AccountModel extends BaseModel
         return false;
     }
    }
+   public function UpDateProfile($firstname,$lastname,$email,$country,$city,$street,$housenumber,$postcode,$img)
+   {
+    try
+    {
+        $conn=$this->createConnection();
+        $sql_one='UPDATE `customer` SET `country`=?,`city`=?,`street`=?,`housenumber`=?,`postcode`=? WHERE customer_id=?';
+        $sql_two='UPDATE `account` SET `portrait_link`=?,`Email`=?,`first_name`=?,`last_name`=? WHERE username=?';
+        $stmt=$conn->prepare($sql_one);
+        $stmt->execute([$country,$city,$street,$housenumber,$postcode,$_SESSION['customer_id']]);
+        $stmt=$conn->prepare($sql_two);
+        $stmt->execute(["app/views/img/defaultprotrait.PNG",$email,$firstname,$lastname,$_SESSION['username']]);
+        return true;
+    }
+    catch(PDOException $e)
+    {
+        $conn=null;
+        return false;
+    }
+
+   }
 
 }
 

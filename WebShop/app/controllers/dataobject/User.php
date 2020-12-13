@@ -33,7 +33,7 @@ abstract class User
     }
     public function Update_Portrait_Of_User($userprotrait)
     {
-        if($userportrait=="")
+        if($userprotrait=="")
         {
             $userprotrait="defaultprotrait.PNG";
         }

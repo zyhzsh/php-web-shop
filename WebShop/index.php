@@ -34,6 +34,7 @@
           case 'productmanager': $elementcontroller->GetElement("productmanager");break;
           case 'shoppingcart': $elementcontroller->GetElement("shoppingcart");break;
           case 'about': $elementcontroller->GetElement("about");break;
+          case 'search': $elementcontroller->GetElement("search");break;
         }
       }
       else{

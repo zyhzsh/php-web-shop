@@ -1,3 +1,66 @@
-.User_Profile_Container{
-    color: gray;
+/* Profile*/
+main h1{
+    text-align: right;
+}
+.Content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.Profile_Container,.Rencent_Order_Container{
+    margin-left: 20px;
+}
+.Profile_Info{
+    display: grid;
+    background-color: gainsboro;
+    border-radius: 25px;
+}
+.protrait_container,.imgupload{
+    display: flex;
+    justify-content: center;
+}
+.protrait_container>img{
+    width: 100px;
+    border-radius: 50px;
+}
+.infor_Container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 3px;
+}
+.customerfristname,.customerlastname,.email,.country,.city
+,.street,.postcode{
+    text-align: right;
+    line-height: 1.3;
+}
+.Profile_Info input{
+    width: 200px;
+}
+.btn_container{
+    text-align: center;
+}
+
+.btn-submit{
+    width: 200px;
+}
+
+.Title{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/**/
+
+.Rencent_Order_Container{
+    margin-right: 20px;
+}
+.Order_Content_Container{
+    background-color:gainsboro;
+    border-radius: 50px;
+}
+.Order_Content_Container h2{
+    text-align: center;
+}
+.Order-Lines{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
 }

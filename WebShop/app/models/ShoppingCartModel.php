@@ -79,7 +79,35 @@
             return false;
         }
     }
-
+    public function Update_Product_Amount_On_Cart($customerid,$productid,$quantity)
+    {
+        try{
+            if(self::$connection==null){self::$connection=$this->createConnection();}
+            {
+                $sql="SELECT * FROM cart WHERE customer_id=? AND product_id=?";
+                $stmt=self::$connection->prepare($sql);
+                $stmt->execute([$customerid,$productid]);
+                $result=$stmt->fetchAll();
+                if(empty($result))
+                {
+                    return false;
+                }
+                else//when product exsits
+                {
+                    $sql="UPDATE `cart` SET quantity=? WHERE customer_id=? AND product_id=?";
+                    $stmt=self::$connection->prepare($sql);
+                    $stmt->execute([$quantity,$customerid,$productid]);
+                    self::$connection=null;
+                    return true;
+                }   
+            }
+        }
+        catch(PDOException $e)
+        {
+            self::$connection=null;
+            return false;
+        }
+    }
 
 
  }

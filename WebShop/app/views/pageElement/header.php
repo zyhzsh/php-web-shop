@@ -10,8 +10,8 @@
         <div class="iconlinks">
           <div class="user"><a href="?page=login"><i class="far fa-user fa-2x"></i></a></div>
           <div class="shoppingcart"><a href="?page=shoppingcart"><i class="fas fa-shopping-cart fa-2x"></i></a></div>
-          <div class="searchbar"><form class="" action="" method="post"><input type="text" name="" value=""> </form> </div>
-          <div class="btn-search"><a href=""><i class="fas fa-search fa-2x"></i></a></div>
+          <div class="searchbar"><input id="searchtext" type="text" name="search" value=""> </form> </div>
+          <div class="btn-search"><a id="searchbtn" href="#"><i class="fas fa-search fa-2x"></i></a></div>
         </div>
         <div class="mini-navbar">
           <i class="fas fa-bars fa-3x">
@@ -25,4 +25,14 @@
           </i>
         </div>
       </nav>
+
+      <script>
+        let btn_search=document.getElementById("searchbtn");
+        let text=document.getElementById("searchtext");
+        btn_search.addEventListener("click",AddResquest);
+        function AddResquest()
+        {
+          btn_search.href='?page=search&text='+text.value;
+        }
+      </script>
 </header>
