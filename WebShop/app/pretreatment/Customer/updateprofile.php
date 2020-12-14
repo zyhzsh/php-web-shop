@@ -10,11 +10,13 @@
             if($result==true)
             {
                 header("Location:../../../?page=profile&message=uploadsucceed");
+                exit();
             }
         }
         else
         {
             header("Location:../../../?page=profile&message=Please At Least filled in Name and Email");
+            exit();
         }
     }
 

@@ -99,13 +99,36 @@ class AccountModel extends BaseModel
     try
     {
         $conn=$this->createConnection();
+        session_start(); 
         $sql_one='UPDATE `customer` SET `country`=?,`city`=?,`street`=?,`housenumber`=?,`postcode`=? WHERE customer_id=?';
         $sql_two='UPDATE `account` SET `portrait_link`=?,`Email`=?,`first_name`=?,`last_name`=? WHERE username=?';
+        $sql_three='SELECT * From customer WHERE customer_id=?';
+        $sql_four='SELECT *From account WHERE username=?';
         $stmt=$conn->prepare($sql_one);
         $stmt->execute([$country,$city,$street,$housenumber,$postcode,$_SESSION['customer_id']]);
         $stmt=$conn->prepare($sql_two);
         $stmt->execute(["app/views/img/defaultprotrait.PNG",$email,$firstname,$lastname,$_SESSION['username']]);
+        
+        $stmt=$conn->prepare($sql_three);
+        $stmt->execute([$_SESSION['customer_id']]);
+        $result=$stmt->fetch();
+        $_SESSION['country']=$result['country'];
+        $_SESSION['city']=$result['city'];
+        $_SESSION['street']=$result['street'];
+        $_SESSION['housenumber']=$result['housenumber'];
+        $_SESSION['postcode']=$result['postcode'];    
+       
+        $stmt=$conn->prepare($sql_four);
+        $stmt->execute([$_SESSION['username']]);   
+        $result=$stmt->fetch();
+        $_SESSION['portrait']=$result['portrait_link'];
+        $_SESSION['email']=$result['Email'];
+        $_SESSION['firstname']=$result['first_name'];
+        $_SESSION['lastname']=$result['last_name'];
+        $conn=null;
         return true;
+
+
     }
     catch(PDOException $e)
     {
