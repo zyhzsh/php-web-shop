@@ -44,7 +44,14 @@ class ProductController
     else
       return false;
   }
-
+  public function Get_New_Products($amount)
+  {
+    $db=new ProductModel();
+    $result=$db->Get_New_Products($amount);
+    return $result;
+    // if($result!=null){return $result;}
+    // else{return null;}
+  }
 
 }
 ?>

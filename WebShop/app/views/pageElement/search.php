@@ -1,10 +1,6 @@
 <link rel="stylesheet" href="app/views/css/searchpage.css">
 <main>
 <?php
-// echo $result[0]->Get("name");
-// echo $result[0]->Get("img");
-// echo $result[0]->Get("url");
-// echo $result[0]->Get("Text");
 function GetSearchItem()
 {
     if(isset($_GET['text']))
@@ -26,10 +22,8 @@ function GetSearchItem()
             echo '<div class="Search_Item_Container">
                <h2 style="text-align: center"> NO Result </h2>
             </div>';
-        }
-        
+        }  
     }
-
 }
 ?>
 <div class="Container">

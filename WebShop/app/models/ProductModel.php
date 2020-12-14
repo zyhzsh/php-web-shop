@@ -97,6 +97,43 @@ class ProductModel extends BaseModel
         self::$connection=null;
    }
 
+   public function Get_New_Products($amount)
+   {
+    try
+    {
+      $products=array();
+      if(self::$connection==null){self::$connection=$this->createConnection();}
+      //$sql='SELECT * FROM `product` ORDER BY product_id DESC LIMIT ?';
+      $sql='SELECT * FROM `product` ORDER BY product_id DESC';
+      $stmt=self::$connection->prepare($sql);
+      $stmt->execute([':amount'=>$amount]);
+      $result=$stmt->fetchAll();
+      if(!empty($result))
+      {
+        for($i=0;$i<$amount;$i++)
+        {
+           $product=new Product($result[$i]['product_id'],$result[$i]['product_name'],$result[$i]['current_price'],$result[$i]['current_stock'],$result[$i]['description'],$result[$i]['img_link'],$result[$i]['category']);
+           $products[]=$product;
+        }
+        // foreach($result as $x)
+        // {
+        //   return "ssss";
+        //   // $product=new Product($x['product_id'],$x['product_name'],$x['current_price'],$x['current_stock'],$x['description'],$x['img_link'],$x['category']);
+        //   // $products[]=$product;
+        // }
+        self::$connection=null;
+        return $products;
+      }
+      self::$connection=null;
+      return null;
+  }
+  catch(PDOException $e)
+  {
+      return null;
+  }
+
+  }
+
 }
 
 ?>

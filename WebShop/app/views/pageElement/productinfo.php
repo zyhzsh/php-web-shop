@@ -19,7 +19,7 @@
 
 
 <link rel="stylesheet" href="app/views/css/productinfo.css">
-<main>
+<main id="in">
 <div class="prodcutimg"><img src="<?php echo $product->Get_Product_img();?>" alt=""></div>
 <div class="productinfo">
     <p>Product Name: <?php echo $product->Get_Product_Name(); ?></p>
@@ -39,6 +39,5 @@
     <h2><?php echo "Product Name:".$product->Get_Product_Name(); ?></h2>
     <?php echo $product->Get_Product_Descrition();?>
 </div>
-
 </div>
 </main>

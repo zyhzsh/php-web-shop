@@ -56,11 +56,55 @@ function CreateProductShowCase($productid,$productname,$productimg,$productprice
     </div>
     ';
 }
-?>
+function GetCarousel()
+{
+    $product_controller=new ProductController();
+    $result=$product_controller->Get_New_Products(3);
+    echo '<div class="ProductDescription">';
+    $i=0;
+    foreach($result as $x)
+    {
+        $descriptionid="";
+        switch($i){
+            case 0: $descriptionid="One"; break;
+            case 1: $descriptionid="Two"; break;
+            case 2: $descriptionid="Three"; break;
+        }   
+        echo    
+        '<div style="display:none" id="'.$descriptionid.'" class="product_intro">
+            <h3>'.$x->Get_Product_Name().'</h3>
+            <h4>'.$x->Get_Product_Price().'EUR</h4>
+            <p>'.$x->Get_Product_Descrition().'</p>
+            <br>
+            <br>
+            <a id="learnmore" class="ui-button" href="?page=productinfo&product='.$x->Get_Product_Id().'">Learn More</a>
+            </div>';
+            $i++;
+    }
+    echo '</div>';
+    echo '<div class="carousel-container">
+    <i class="fas fa-arrow-left" id="btn-Rrev"></i>
+    <i class="fas fa-arrow-right" id="btn-Next"></i>
+    <div class="carousel-slide">
+    <img src="'.$result[2]->Get_Product_img().'" id="lastClone" alt="Three">
+    <img src="'.$result[0]->Get_Product_img().'" alt="One">
+    <img src="'.$result[1]->Get_Product_img().'" alt="Two">
+    <img src="'.$result[2]->Get_Product_img().'" alt="Three">
+    <img src="'.$result[0]->Get_Product_img().'" id="firstClone" alt="One">
+    </div>
+    </div>';
 
+}
+?>
 <!-- Main Content-->
 <link rel="stylesheet" href="app/views/css/homepagecontent.css">
 <main>
+<h2 style="text-align: center">What's New ?</h2>
+<div class="newproductshowcase">
+<?php 
+GetCarousel();
+?>
+</div>
 <div class="container"> 
     <?php
     echo '<h2 id="C-Shose" class="text-center mt-5">Shoes</h2>';
@@ -72,6 +116,7 @@ function CreateProductShowCase($productid,$productname,$productimg,$productprice
     $product_controller=new ProductController();
     $product_controller->Close_The_Connection();
     ?>
+    <script type="text/javascript" src="app/views/javascript/Effect/carousel.js"></script>
 </div>
 </main>
 
